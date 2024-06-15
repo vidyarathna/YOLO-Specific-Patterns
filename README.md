@@ -15,7 +15,7 @@ Before running the script, make sure you have the following installed:
 Clone the repository:
 
 ```sh
-git clone https://github.com/yourusername/YOLO-Specific-Patterns.git
+git clone https://github.com/vidyarathna/YOLO-Specific-Patterns.git
 cd YOLO-Specific-Patterns
 ```
 
