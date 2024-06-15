@@ -30,7 +30,7 @@ pip install -r requirements.txt
 To detect specific patterns in images using YOLO, run the script `yolo_detect_specific_patterns.py` with the following command:
 
 ```sh
-python yolo_detect_specific_patterns.py --input path/to/input/images --yolo path/to/yolo-coco --output path/to/output --patterns person dog --confidence 0.5 --threshold 0.3
+python yolo_detect_specific_patterns.py -i path/to/input/images -y path/to/yolo-coco -o path/to/output -p person dog
 ```
 
 ### Arguments
@@ -39,13 +39,11 @@ python yolo_detect_specific_patterns.py --input path/to/input/images --yolo path
 - `-y`, `--yolo`: Base path to the YOLO directory containing `coco.names`, `yolov3.weights`, and `yolov3.cfg`.
 - `-o`, `--output`: Path to the output directory where detected objects will be saved.
 - `-p`, `--patterns`: List of patterns (class labels) to detect and save.
-- `-c`, `--confidence`: Minimum probability to filter weak detections (default is 0.5).
-- `-t`, `--threshold`: Threshold when applying non-maxima suppression (default is 0.3).
 
 ### Example
 
 ```sh
-python yolo_detect_specific_patterns.py --input ./input_images --yolo ./yolo-coco --output ./output_objects --patterns person dog --confidence 0.5 --threshold 0.3
+python yolo_detect_specific_patterns.py -i ./input_images -y ./yolo-coco -o ./output_objects -p person dog
 ```
 
 This command will process all images in the `./input_images` directory, detect objects matching the "person" and "dog" class labels using the YOLO model, and save the detected objects in the `./output_objects` directory.
